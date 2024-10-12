@@ -57,13 +57,13 @@ export const PROJECTS = [
       "A portfolio website using Next.js, TypeScript, Framer Motion, and Tailwind CSS to showcase my skills, projects, and contact information.",
     image: projectImage1,
     githubLink: "https://github.com/user/personal-portfolio",
-    viewDemo:""
+    viewDemo:"https://sankeethantharmathayalan.vercel.app/"
   },
   {
     id: 2,
     name: "A Full-stack E-Commerce Website",
     description:
-      "An e-commerce web application developed using Next.js, TypeScript, Tailwind CSS, and Wix Headless solutions for featuring a comprehensive product catalog, shopping cart, and checkout system using nodeMailer.",
+      "An e-commerce web application developed using Next.js, TypeScript, Tailwind CSS, and Wix Headless solutions for featuring a comprehensive real time product cart.",
     image: projectImage2,
     githubLink: "https://github.com/Sankeethan01/starlight.git",
     viewDemo: "https://starlightonlineshopping.vercel.app/",
