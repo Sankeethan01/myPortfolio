@@ -1,8 +1,5 @@
 "use client"
-
 import React, { useState } from 'react';
-import logo from '@/assets/logo.png';
-import Image from 'next/image';
 import { NAVIGATION_LINKS } from '@/constants';
 import { FaTimes } from 'react-icons/fa';
 import { FaBars } from 'react-icons/fa6';

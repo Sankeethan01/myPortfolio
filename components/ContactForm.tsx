@@ -29,7 +29,7 @@ const ContactForm = () => {
     };
 
     const validate = () => {
-        let validationErrors: any = {};
+        const validationErrors: Partial<{ name: string; email: string; message: string }> = {};
         if (!formData.name) validationErrors.name = "Name is required";
         if (!formData.email) {
             validationErrors.email = "Email is required";
@@ -44,7 +44,11 @@ const ContactForm = () => {
         e.preventDefault();
         const validationErrors = validate();
         if (Object.keys(validationErrors).length > 0) {
-            setErrors(validationErrors);
+            setErrors({
+                name: validationErrors.name || "",
+                email: validationErrors.email || "",
+                message: validationErrors.message || "",
+            });
         } else {
             setErrors({
                 name: "",
