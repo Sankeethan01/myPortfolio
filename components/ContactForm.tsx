@@ -9,7 +9,7 @@ const ContactForm = () => {
     const [formData, setFormData] = useState({
         name: "",
         email: "",
-        message: ""
+        message: "",
     });
 
     const [errors, setErrors] = useState({
@@ -53,7 +53,7 @@ const ContactForm = () => {
             setErrors({
                 name: "",
                 email: "",
-                message: ""
+                message: "",
             });
             setIsSending(true);
 
@@ -63,7 +63,7 @@ const ContactForm = () => {
                     setFormData({
                         name: "",
                         email: "",
-                        message: ""
+                        message: "",
                     });
                 })
                 .catch(() => {
@@ -79,7 +79,7 @@ const ContactForm = () => {
         <div className='p-4 lg:w-3/4' id='contact'>
             <Toaster />
             <h2 className='mb-12 mt-20 text-center text-4xl font-semibold'>
-                Let's Connect
+            Let&apos;s Connect
             </h2>
             <motion.form 
             initial={{opacity:0}}
