@@ -10,6 +10,7 @@ import projectImage3 from "../assets/project3.png";
 import projectImage4 from "../assets/project4.png";
 import projectImage5 from "../assets/project5.png";
 import projectImage6 from "../assets/project6.png";
+import projectImage7 from "../assets/project7.png";
 
 import htmlImg from '@/assets/html.png';
 import cssImg from '@/assets/css.png';
@@ -52,6 +53,15 @@ export const HERO = {
 export const PROJECTS = [
   {
     id: 1,
+    name: "QuickMatch",
+    description:
+      "Academic project that connecting customers and service providers in 4 service categories. React for the frontend, PHP for the backend API, and MySQL for secure database",
+    image: projectImage7,
+    githubLink: "https://github.com/Sankeethan01/QuickMatch.git",
+    viewDemo:"https://www.linkedin.com/posts/sankee26_quickmatch-academicproject-webdevelopment-activity-7255576882262282240-VYRm?utm_source=share&utm_medium=member_desktop"
+  },
+  {
+    id: 2,
     name: "My Portfolio Website",
     description:
       "A portfolio website using Next.js, TypeScript, Framer Motion, and Tailwind CSS to showcase my skills, projects, and contact information.",
@@ -60,7 +70,7 @@ export const PROJECTS = [
     viewDemo:"https://sankeethantharmathayalan.vercel.app/"
   },
   {
-    id: 2,
+    id: 3,
     name: "A Full-stack E-Commerce Website",
     description:
       "An e-commerce web application developed using Next.js, TypeScript, Tailwind CSS, and Wix Headless solutions for featuring a comprehensive real time product cart.",
@@ -69,7 +79,7 @@ export const PROJECTS = [
     viewDemo: "https://starlightonlineshopping.vercel.app/",
   },
   {
-    id: 3,
+    id: 4,
     name: "A News Reading Website",
     description:
       "A latest Sri Lankan and world news viewing web app built with Next.js, Tailwind CSS, and MongoDB for efficient data fetching, including features like news searching, and contact section.",
@@ -78,7 +88,7 @@ export const PROJECTS = [
     viewDemo: "https://www.linkedin.com/posts/sankee26_nextjs-tailwindcss-mongodb-activity-7243516175349874690-vxHd?utm_source=share&utm_medium=member_desktop",
   },
   {
-    id: 4,
+    id: 5,
     name: "Scheduling Task Application",
     description:
       "A ToDo application that uses the MongoDb to fetch and display current saved tasks, add new tasks and update tasks, built with React, Node.js, Express.js, and Bootstrap.",
@@ -87,7 +97,7 @@ export const PROJECTS = [
     viewDemo: "https://www.linkedin.com/posts/sankee26_mernstack-fullstackdevelopment-javascript-activity-7243152058424397824-JNKw?utm_source=share&utm_medium=member_desktop",
   },
   {
-    id: 5,
+    id: 6,
     name: "A Custom Youtube Clone",
     description:
       "CloneTube - A realtime youtube clone created with React and Youtube API. This showcases latest youtube videos, play videos, choose videos by category, and accurate video informations.",
@@ -96,7 +106,7 @@ export const PROJECTS = [
     viewDemo: "https://remarkable-longma-4b8991.netlify.app/",
   },
   {
-    id: 6,
+    id: 7,
     name: "An attractive Image Gallery",
     description:
       "A real-time free image application using Pexels API for backend services. Built with HTML, CSS, and JavaScript. Images can be viewable, searchable, and downloadable.",
