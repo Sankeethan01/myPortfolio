@@ -19,9 +19,9 @@ const page = () => {
            <Hero />
            <Navbar />
            <About />
-           <EducationSection />
            <Skills />
            <Projects />
+           <EducationSection />
            <ContactForm />
            <Footer />
      </div>

@@ -5,7 +5,7 @@ import { motion } from 'framer-motion';
 
 const About = () => {
     return (
-        <section className='flex max-w-4xl flex-col gap-12' id='about'>
+        <section className='flex max-w-4xl flex-col gap-12 -mt-10' id='about'>
             <motion.h2
                 initial={{ opacity: 0, y: -20 }}
                 whileInView={{ opacity: 1, y: 0 }}

@@ -47,7 +47,7 @@ export const HERO = {
   name: "Sankeethan Tharmathayalan",
   greet: "Full Stack Developer",
   description:
-    "I'm a Full Stack Developer with expertise in building modern, responsive applications using cutting-edge technologies. I thrive on solving complex problems and delivering seamless, and scalable solutions.",
+    "Crafting seamless digital experiences with cutting-edge technologies.",
 };
 
 export const PROJECTS = [
