@@ -47,7 +47,7 @@ export const HERO = {
   name: "Sankeethan Tharmathayalan",
   greet: "Full Stack Developer",
   description:
-    "I'm a Full Stack Developer with expertise in building modern, responsive applications using cutting-edge technologies. I thrive on solving complex problems and delivering seamless, scalable solutions for the web...",
+    "I'm a Full Stack Developer with expertise in building modern, responsive applications using cutting-edge technologies. I thrive on solving complex problems and delivering seamless, and scalable solutions.",
 };
 
 export const PROJECTS = [
@@ -269,7 +269,7 @@ export const SOCIAL_MEDIA_LINKS = [
     icon: <FaLinkedin fontSize={50} className="hover:opacity-80" />,
   },
   {
-    href: "mailto:sankee26july@gmail.com",
+    href: "mailto:sankeethantharmathayalan@gmail.com",
     icon: <FaEnvelope fontSize={50} className="hover:opacity-80" />,
   },
 ];

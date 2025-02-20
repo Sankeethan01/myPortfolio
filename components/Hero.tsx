@@ -1,7 +1,7 @@
 "use client"
 import { HERO, SOCIAL_MEDIA_LINKS } from '@/constants'
 import React from 'react'
-import cardimg from '@/assets/hero.png'
+import cardimg from '@/assets/hero2.png'
 import {motion} from "framer-motion";
 import { Typewriter } from 'react-simple-typewriter';
 
@@ -14,12 +14,12 @@ const Hero = () => {
         animate={{opacity:1,x:0}}
         transition={{duration:1}}
       className='w-full md:w-1/2 text-center'>
-      <h2 className='my-8 p-2 text-4xl font-semibold md:text-5xl lg:text=[6.5rem] md:ml-10'>
+      <h2 className='my-6 p-2 text-4xl font-semibold md:text-5xl lg:text-4xl md:ml-10'>
         {HERO.name}
         </h2>
-        <p className='p-2 text-3xl tracking-tighter lg:text-6xl md:ml-10'>
+        <p className='p-2 text-3xl tracking-tighter lg:text-5xl md:ml-10'>
         Full{' '}
-        <span style={{ color: '#FACC15' }}> 
+        <span style={{ color: '#dacfc8' }}> 
             <Typewriter
               words={['Stack Developer']}
               loop={true}
