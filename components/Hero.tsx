@@ -14,7 +14,7 @@ const Hero = () => {
         transition={{ duration: 1 }}
         className="w-full md:w-1/2 mb-10 mt-15"
       >
-        <h2 className="my-6 font-semibold text-2xl ml-3">
+        <h2 className="my-6 font-semibold text-2xl sm:ml-3 lg:ml-12">
           Hey, I am {HERO.name}
         </h2>
         <p className="p-2 text-5xl tracking-tighter lg:text-6xl md:ml-10 text-left">
