@@ -8,7 +8,7 @@ const Footer = () => {
         <div className='mb-8 mt-20'>
             <div className='flex flex-col items-center justify-center'>
                     <h1 className='text-center text-lg'>Sankeethan Tharmathayalan</h1>
-                    <h3 style={{fontFamily:"monospace"}} className='text-center mb-3'>077 8337 669</h3>
+                    <h3 style={{fontFamily:"monospace"}} className='text-center mb-3'>+94 77 8337 669</h3>
             </div>
             <div className='flex items-center justify-center gap-8'>
                 {SOCIAL_MEDIA_LINKS.map((link,index)=>(

@@ -11,6 +11,7 @@ const config: Config = {
     extend: {
       colors: {
         background: "var(--background)",
+        special:'#dacfc8',
       },
     },
   },

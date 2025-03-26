@@ -40,7 +40,7 @@ const Navbar = () => {
                             <ul className='flex items-center gap-4 justify-center'>
                                 {NAVIGATION_LINKS.map((item, index) => (
                                     <li key={index}>
-                                        <a href={item.href} className={`text-xl hover:text-yellow-300`}
+                                        <a href={item.href} className={`text-xl hover:text-special`}
                                             onClick={(e) => handleLinkClick(e, item.href)}>
                                             {item.label}
                                         </a>
