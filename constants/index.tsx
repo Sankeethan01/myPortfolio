@@ -33,7 +33,7 @@ import jhcImg from "@/assets/jhc.png";
 export const NAVIGATION_LINKS = [
   // { label: "Intro", href: "#hero"},
   { label: "About", href: "#about" },
-  { label: "Services", href: "#services" },
+  { label: "Experience", href: "#experience" },
   { label: "Skills", href: "#skills" },
   { label: "Projects", href: "#projects" },
   { label: "Education", href: "#education" },
@@ -57,6 +57,7 @@ export const PROJECTS = [
     githubLink: "https://github.com/Sankeethan01/QuickMatch.git",
     viewDemo:
       "https://www.linkedin.com/posts/sankee26_quickmatch-academicproject-webdevelopment-activity-7255576882262282240-VYRm?utm_source=share&utm_medium=member_desktop",
+    tech: ["React", "PHP", "MySQL"],
   },
   {
     id: 2,
@@ -66,6 +67,7 @@ export const PROJECTS = [
     image: projectImage1,
     githubLink: "https://github.com/user/personal-portfolio",
     viewDemo: "https://sankeethantharmathayalan.vercel.app/",
+    tech: ["Next.js", "TypeScript", "Framer Motion", "Tailwind CSS"],
   },
   {
     id: 3,
@@ -75,6 +77,7 @@ export const PROJECTS = [
     image: projectImage2,
     githubLink: "https://github.com/Sankeethan01/starlight.git",
     viewDemo: "https://starlightonlineshopping.vercel.app/",
+    tech: ["Next.js", "TypeScript", "Tailwind CSS", "Wix Headless solutions"],
   },
   {
     id: 4,
@@ -85,6 +88,7 @@ export const PROJECTS = [
     githubLink: "https://github.com/Sankeethan01/news-app-NextJs.git",
     viewDemo:
       "https://www.linkedin.com/posts/sankee26_nextjs-tailwindcss-mongodb-activity-7243516175349874690-vxHd?utm_source=share&utm_medium=member_desktop",
+    tech: ["Next.js", "Tailwind CSS", "MongoDB"],
   },
   {
     id: 5,
@@ -95,6 +99,7 @@ export const PROJECTS = [
     githubLink: "https://github.com/user/weather-app",
     viewDemo:
       "https://www.linkedin.com/posts/sankee26_mernstack-fullstackdevelopment-javascript-activity-7243152058424397824-JNKw?utm_source=share&utm_medium=member_desktop",
+    tech: ["React", "Node.js", "Express.js", "Bootstrap"],
   },
   {
     id: 6,
@@ -104,6 +109,7 @@ export const PROJECTS = [
     image: projectImage5,
     githubLink: "https://github.com/Sankeethan01/YouTube-clone.git",
     viewDemo: "https://remarkable-longma-4b8991.netlify.app/",
+    tech: ["React", "Youtube API"],
   },
   {
     id: 7,
@@ -113,6 +119,7 @@ export const PROJECTS = [
     image: projectImage6,
     githubLink: "https://github.com/Sankeethan01/ImageGallery.git",
     viewDemo: "https://stellular-banoffee-1dd6aa.netlify.app/",
+    tech: ["HTML", "CSS", "JavaScript"],
   },
 ];
 
