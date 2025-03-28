@@ -300,7 +300,7 @@ export const CUSTOMTECS = [
   },
   {
     id: 4,
-    icon: <Image src={figmaImg} alt="figma" width={60} height={60} />,
+    icon: <Image src={figmaImg} alt="figma" width={100} height={100} />,
     name: "Figma",
   },
   {
