@@ -70,9 +70,9 @@ export const PROJECTS = [
     description:
       "A simple email signature generator that allows users to create a professional email signature in minutes.",
     image: projectImage9,
-    githubLink: "https://github.com/Sankeethan01/QuickMatch.git",
+    githubLink: "https://www.simpleemailsignature.com/",
     viewDemo:
-      "https://www.linkedin.com/posts/sankee26_quickmatch-academicproject-webdevelopment-activity-7255576882262282240-VYRm?utm_source=share&utm_medium=member_desktop",
+      "https://www.simpleemailsignature.com/",
     tech: ["Next.js", "Tailwind CSS", "Supabase","PostgreSQL"],
   },
   {
@@ -81,9 +81,9 @@ export const PROJECTS = [
     description:
       "A book review website that allows users to search for books, read reviews, and add their own reviews.",
     image: projectImage8,
-    githubLink: "https://github.com/Sankeethan01/QuickMatch.git",
+    githubLink: "https://github.com/Sankeethan01/book_review_frontend",
     viewDemo:
-      "https://www.linkedin.com/posts/sankee26_quickmatch-academicproject-webdevelopment-activity-7255576882262282240-VYRm?utm_source=share&utm_medium=member_desktop",
+      "https://www.linkedin.com/posts/sankee26_django-restapi-nextjs-activity-7291844906162008065-nXK4?utm_source=share&utm_medium=member_desktop&rcm=ACoAAEO7lCgB2orVM09nJDGM9LskZmQD6YRmKag",
     tech: ["Next.js", "Tailwind CSS", "Django","Django Rest Framework","PostgreSQL"],
   },
   {
@@ -103,7 +103,7 @@ export const PROJECTS = [
     description:
       "A portfolio website using Next.js, TypeScript, Framer Motion, and Tailwind CSS to showcase my skills, projects, and contact information.",
     image: projectImage1,
-    githubLink: "https://github.com/user/personal-portfolio",
+    githubLink: "https://github.com/Sankeethan01/myPortfolio.git",
     viewDemo: "https://sankeethantharmathayalan.vercel.app/",
     tech: ["Next.js", "TypeScript", "Framer Motion", "Tailwind CSS"],
   },
@@ -134,7 +134,7 @@ export const PROJECTS = [
     description:
       "A ToDo application that uses the MongoDb to fetch and display current saved tasks, add new tasks and update tasks, built with React, Node.js, Express.js, and Bootstrap.",
     image: projectImage4,
-    githubLink: "https://github.com/user/weather-app",
+    githubLink: "https://github.com/Sankeethan01/todo-backend-MERN.git",
     viewDemo:
       "https://www.linkedin.com/posts/sankee26_mernstack-fullstackdevelopment-javascript-activity-7243152058424397824-JNKw?utm_source=share&utm_medium=member_desktop",
     tech: ["React", "Node.js", "Express.js", "Bootstrap"],
