@@ -36,7 +36,7 @@ const categories = [
   { id: "frontend", label: "Frontend", icon: <FiCode className="w-5 h-5" />, color: "from-blue-500 to-cyan-500" },
   { id: "backend", label: "Backend", icon: <FiServer className="w-5 h-5" />, color: "from-purple-500 to-pink-500" },
   { id: "database", label: "Database", icon: <FiDatabase className="w-5 h-5" />, color: "from-orange-500 to-red-500" },
-  { id: "custom", label: "Custom", icon: <FiTool className="w-5 h-5" />, color: "from-green-500 to-emerald-500" }
+  { id: "custom", label: "Other", icon: <FiTool className="w-5 h-5" />, color: "from-green-500 to-emerald-500" }
 ];
 
 const Skills = () => {

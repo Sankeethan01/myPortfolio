@@ -7,6 +7,8 @@ import projectImage4 from "../assets/project4.png";
 import projectImage5 from "../assets/project5.png";
 import projectImage6 from "../assets/project6.png";
 import projectImage7 from "../assets/project7.png";
+import projectImage8 from "@/assets/book-review-logo.png";
+import projectImage9 from "@/assets/signature.png";
 
 import htmlImg from "@/assets/html.png";
 import cssImg from "@/assets/css.png";
@@ -29,6 +31,20 @@ import pythonImg from "@/assets/python.png";
 import Image from "next/image";
 import uwuImg from "@/assets/uwu.jpg";
 import jhcImg from "@/assets/jhc.png";
+import djangoImg from "@/assets/django.png";
+import laravelImg from "@/assets/laravel.png";
+import supabaseImg from "@/assets/supabase.png";
+import postgresImg from "@/assets/postgresqlicon.png";
+import gitImg from "@/assets/git.png";
+import githubImg from "@/assets/github.png";
+import vscodeImg from "@/assets/vscode.png";
+import postmanImg from "@/assets/postman.png";
+import linuxImg from "@/assets/linux.png";
+import figmaImg from "@/assets/figma.png";
+import androidStudioImg from "@/assets/androidstudio.png";
+import firestoreImg from "@/assets/firestore.png";
+
+
 
 export const NAVIGATION_LINKS = [
   // { label: "Intro", href: "#hero"},
@@ -50,6 +66,28 @@ export const HERO = {
 export const PROJECTS = [
   {
     id: 1,
+    name: "Simple Email Signature",
+    description:
+      "A simple email signature generator that allows users to create a professional email signature in minutes.",
+    image: projectImage9,
+    githubLink: "https://github.com/Sankeethan01/QuickMatch.git",
+    viewDemo:
+      "https://www.linkedin.com/posts/sankee26_quickmatch-academicproject-webdevelopment-activity-7255576882262282240-VYRm?utm_source=share&utm_medium=member_desktop",
+    tech: ["Next.js", "Tailwind CSS", "Supabase","PostgreSQL"],
+  },
+  {
+    id: 2,
+    name: "TBD Reads",
+    description:
+      "A book review website that allows users to search for books, read reviews, and add their own reviews.",
+    image: projectImage8,
+    githubLink: "https://github.com/Sankeethan01/QuickMatch.git",
+    viewDemo:
+      "https://www.linkedin.com/posts/sankee26_quickmatch-academicproject-webdevelopment-activity-7255576882262282240-VYRm?utm_source=share&utm_medium=member_desktop",
+    tech: ["Next.js", "Tailwind CSS", "Django","Django Rest Framework","PostgreSQL"],
+  },
+  {
+    id: 3,
     name: "QuickMatch",
     description:
       "Academic project that connecting customers and service providers in 4 service categories. React for the frontend, PHP for the backend API, and MySQL for secure database",
@@ -60,7 +98,7 @@ export const PROJECTS = [
     tech: ["React", "PHP", "MySQL"],
   },
   {
-    id: 2,
+    id: 4,
     name: "My Portfolio Website",
     description:
       "A portfolio website using Next.js, TypeScript, Framer Motion, and Tailwind CSS to showcase my skills, projects, and contact information.",
@@ -70,7 +108,7 @@ export const PROJECTS = [
     tech: ["Next.js", "TypeScript", "Framer Motion", "Tailwind CSS"],
   },
   {
-    id: 3,
+    id: 5,
     name: "A Full-stack E-Commerce Website",
     description:
       "An e-commerce web application developed using Next.js, TypeScript, Tailwind CSS, and Wix Headless solutions for featuring a comprehensive real time product cart.",
@@ -80,7 +118,7 @@ export const PROJECTS = [
     tech: ["Next.js", "TypeScript", "Tailwind CSS", "Wix Headless solutions"],
   },
   {
-    id: 4,
+    id: 6,
     name: "A News Reading Website",
     description:
       "A latest Sri Lankan and world news viewing web app built with Next.js, Tailwind CSS, and MongoDB for efficient data fetching, including features like news searching, and contact section.",
@@ -91,7 +129,7 @@ export const PROJECTS = [
     tech: ["Next.js", "Tailwind CSS", "MongoDB"],
   },
   {
-    id: 5,
+    id: 7,
     name: "Scheduling Task Application",
     description:
       "A ToDo application that uses the MongoDb to fetch and display current saved tasks, add new tasks and update tasks, built with React, Node.js, Express.js, and Bootstrap.",
@@ -102,7 +140,7 @@ export const PROJECTS = [
     tech: ["React", "Node.js", "Express.js", "Bootstrap"],
   },
   {
-    id: 6,
+    id: 8,
     name: "A Custom Youtube Clone",
     description:
       "CloneTube - A realtime youtube clone created with React and Youtube API. This showcases latest youtube videos, play videos, choose videos by category, and accurate video informations.",
@@ -112,7 +150,7 @@ export const PROJECTS = [
     tech: ["React", "Youtube API"],
   },
   {
-    id: 7,
+    id: 9,
     name: "An attractive Image Gallery",
     description:
       "A real-time free image application using Pexels API for backend services. Built with HTML, CSS, and JavaScript. Images can be viewable, searchable, and downloadable.",
@@ -184,8 +222,8 @@ export const FRONTENDSKILLS = [
 export const BACKENDSKILLS = [
   {
     id: 1,
-    icon: <Image src={nextjsImg} alt="next.js" width={60} height={60} />,
-    name: "Next.js",
+    icon: <Image src={djangoImg} alt="django" width={100} height={100} />,
+    name: "Django",
   },
   {
     id: 2,
@@ -205,9 +243,19 @@ export const BACKENDSKILLS = [
   {
     id: 5,
     icon: (
-      <Image src={reactnativeImg} alt="reactnative" width={60} height={60} />
+      <Image src={laravelImg} alt="laravel" width={60} height={60} />
     ),
-    name: "React Native",
+    name: "Laravel",
+  },
+  {
+    id: 6,
+    icon: <Image src={firebaseImg} alt="firebase" width={60} height={60} />,
+    name: "Firebase",
+  },
+  {
+    id: 7,
+    icon: <Image src={supabaseImg} alt="supabase" width={60} height={60} />,
+    name: "Supabase",
   },
 ];
 
@@ -224,8 +272,13 @@ export const DATABASE = [
   },
   {
     id: 3,
-    icon: <Image src={firebaseImg} alt="firebase" width={60} height={60} />,
-    name: "Firebase",
+    icon: <Image src={postgresImg} alt="postgres" width={60} height={60} />,
+    name: "PostgreSQL",
+  },
+  {
+    id: 4,
+    icon: <Image src={firestoreImg} alt="firestore" width={60} height={60} />,
+    name: "Firestore",
   },
 ];
 
@@ -245,7 +298,42 @@ export const CUSTOMTECS = [
     icon: <Image src={cImg} alt="C" width={60} height={60} />,
     name: "C",
   },
+  {
+    id: 4,
+    icon: <Image src={figmaImg} alt="figma" width={60} height={60} />,
+    name: "Figma",
+  },
+  {
+    id: 5,
+    icon: <Image src={androidStudioImg} alt="androidStudio" width={60} height={60} />,
+    name: "Android Studio",
+  },
+  {
+    id: 6,
+    icon: <Image src={gitImg} alt="git" width={60} height={60} />,
+    name: "Git",
+  },
+  {
+    id: 7,
+    icon: <Image src={githubImg} alt="github" width={60} height={60} />,
+    name: "GitHub",
+  },
+  {
+    id: 8,
+    icon: <Image src={vscodeImg} alt="vscode" width={60} height={60} />,
+  },
+  {
+    id: 9,
+    icon: <Image src={postmanImg} alt="postman" width={60} height={60} />,
+  },
+  {
+    id: 10,
+    icon: <Image src={linuxImg} alt="linux" width={60} height={60} />,
+    name: "Linux",
+  },
+  
 ];
+
 
 export const skills = [FRONTENDSKILLS, BACKENDSKILLS, DATABASE, CUSTOMTECS];
 
