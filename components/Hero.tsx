@@ -11,14 +11,14 @@ const techStack = ["HTML5", "CSS", "Javascript", "Node.js", "React", "Git", "Git
 const Hero = () => {
   return (
     <>
-      <section className="relative min-h-[90vh] sm:min-h-screen bg-[#0A192F] text-white px-4 sm:px-6 md:px-12 lg:px-24" id="hero">
+      <section className="relative min-h-[90vh] sm:min-h-screen bg-[#0A192F] text-white px-4 sm:px-6 md:px-12 lg:px-24 xl:px-32 2xl:px-40 overflow-hidden w-full" id="hero">
         {/* Background effects */}
         <div className="absolute inset-0 overflow-hidden">
           <div className="absolute inset-0 bg-gradient-to-b from-[#0A192F] via-[#112240] to-[#0A192F] opacity-50" />
           <div className="absolute inset-0 bg-[radial-gradient(circle_at_50%_50%,rgba(59,130,246,0.1),transparent_50%)]" />
         </div>
 
-        <div className="relative container mx-auto flex flex-col md:flex-row items-center gap-8 sm:gap-12 md:gap-16 pt-20 sm:pt-24 md:pt-32">
+        <div className="relative container mx-auto flex flex-col md:flex-row items-center gap-8 sm:gap-12 md:gap-16 pt-20 sm:pt-24 md:pt-32 xl:pt-40 max-w-full">
           <motion.div
             initial={{ opacity: 0, x: -50 }}
             animate={{ opacity: 1, x: 0 }}
@@ -130,30 +130,32 @@ const Hero = () => {
       </section>
 
       {/* Scrolling Tech Stack */}
-      <div className="relative bg-[#0A192F] overflow-hidden py-4 sm:py-3 border-t border-gray-800">
+      <div className="relative bg-[#0A192F] overflow-hidden py-4 sm:py-3 border-t border-gray-800 w-full">
         <div className="absolute inset-0 bg-gradient-to-r from-blue-500/10 via-purple-500/10 to-blue-500/10" />
-        <motion.div 
-          className="relative flex whitespace-nowrap"
-          animate={{ x: ["0%", "-50%"] }}
-          transition={{ 
-            x: {
-              repeat: Infinity,
-              repeatType: "loop",
-              duration: 20,
-              ease: "linear",
-            },
-          }}
-        >
-          {techStack.map((tech, index) => (
-            <motion.span 
-              key={index} 
-              className="text-gray-400 mx-6 sm:mx-8 text-base sm:text-lg font-medium hover:text-special transition-colors"
-              whileHover={{ scale: 1.1 }}
-            >
-              {tech}
-            </motion.span>
-          ))}
-        </motion.div>
+        <div className="relative overflow-hidden">
+          <motion.div 
+            className="flex whitespace-nowrap"
+            animate={{ x: ["0%", "-50%"] }}
+            transition={{ 
+              x: {
+                repeat: Infinity,
+                repeatType: "loop",
+                duration: 20,
+                ease: "linear",
+              },
+            }}
+          >
+            {techStack.map((tech, index) => (
+              <motion.span 
+                key={index} 
+                className="text-gray-400 mx-6 sm:mx-8 text-base sm:text-lg lg:text-xl font-medium hover:text-special transition-colors touch-manipulation"
+                whileHover={{ scale: 1.1 }}
+              >
+                {tech}
+              </motion.span>
+            ))}
+          </motion.div>
+        </div>
       </div>
     </>
   );
