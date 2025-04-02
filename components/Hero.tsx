@@ -91,8 +91,8 @@ const Hero = () => {
               <motion.a
                 whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.95 }}
-                href="/Sankeethan-FullStackDeveloper-Resume.pdf"
-                download="Sankeethan-FullStackDeveloper-Resume.pdf"
+                href="/Sankeethan-SoftwareEngineer-Resume.pdf"
+                download="Sankeethan-SoftwareEngineer-Resume.pdf"
                 className="group flex items-center gap-2 px-6 sm:px-8 py-3 border border-special text-special rounded-full text-sm sm:text-base font-medium hover:bg-special hover:text-black transition-all duration-300"
               >
                 My resume
