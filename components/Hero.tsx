@@ -84,11 +84,11 @@ const Hero = () => {
                 href="#contact"
                 className="group flex items-center gap-2 px-6 sm:px-8 py-3 bg-special text-black rounded-full text-sm sm:text-base font-medium hover:bg-special/90 transition-all duration-300"
               >
-                Got a project?
+                Hire Me
                 <FiArrowRight className="group-hover:translate-x-1 transition-transform" />
               </motion.a>
               
-              <motion.a
+              {/* <motion.a
                 whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.95 }}
                 href="/Sankeethan-SoftwareEngineer-Resume.pdf"
@@ -97,7 +97,7 @@ const Hero = () => {
               >
                 My resume
                 <FiArrowRight className="group-hover:translate-x-1 transition-transform" />
-              </motion.a>
+              </motion.a> */}
             </motion.div>
           </motion.div>
 
