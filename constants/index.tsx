@@ -321,10 +321,12 @@ export const CUSTOMTECS = [
   {
     id: 8,
     icon: <Image src={vscodeImg} alt="vscode" width={60} height={60} />,
+    name: "VS Code",
   },
   {
     id: 9,
     icon: <Image src={postmanImg} alt="postman" width={60} height={60} />,
+    name: "Postman",
   },
   {
     id: 10,
