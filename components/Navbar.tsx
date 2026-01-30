@@ -1,11 +1,20 @@
 "use client"
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { NAVIGATION_LINKS } from '@/constants';
-import { FaTimes } from 'react-icons/fa';
-import { FaBars } from 'react-icons/fa6';
+import { FiX, FiMenu } from 'react-icons/fi';
+import { motion, AnimatePresence } from 'framer-motion';
 
 const Navbar = () => {
     const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
+    const [scrolled, setScrolled] = useState(false);
+
+    useEffect(() => {
+        const handleScroll = () => {
+            setScrolled(window.scrollY > 50);
+        };
+        window.addEventListener('scroll', handleScroll);
+        return () => window.removeEventListener('scroll', handleScroll);
+    }, []);
 
     const toggleMobileMenu = () => {
         setIsMobileMenuOpen(!isMobileMenuOpen);
@@ -28,59 +37,97 @@ const Navbar = () => {
         setIsMobileMenuOpen(false);
     };
 
-
     return (
-        <div>
-            <nav className='fixed left-0 right-0 top-4 z-50 px-4'>
-                <div className='mx-auto hidden max-w-2xl items-center 
-                justify-center rounded-lg border border-stone-50/30 bg-black/20
-                py-3 backdrop-blur-lg lg:flex xl:max-w-3xl 2xl:max-w-4xl overflow-hidden'>
-                    <div className='flex items-center justify-between'>
-                        <div className=''>
-                            <ul className='flex items-center gap-4 xl:gap-6 2xl:gap-8 justify-center'>
-                                {NAVIGATION_LINKS.map((item, index) => (
-                                    <li key={index}>
-                                        <a href={item.href} className={`text-xl xl:text-2xl 2xl:text-3xl hover:text-special transition-colors touch-manipulation`}
-                                            onClick={(e) => handleLinkClick(e, item.href)}>
-                                            {item.label}
-                                        </a>
-                                    </li>
-                                ))}
-                            </ul>
+        <motion.nav 
+            initial={{ y: -100 }}
+            animate={{ y: 0 }}
+            transition={{ duration: 0.5 }}
+            className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
+                scrolled ? 'bg-primary/80 backdrop-blur-lg border-b border-border' : 'bg-transparent'
+            }`}
+        >
+            <div className='max-w-6xl mx-auto px-6'>
+                <div className='flex items-center justify-between h-16 md:h-20'>
+                    {/* Logo */}
+                    <a href="#hero" className='text-xl font-bold text-text-primary hover:text-accent transition-colors'>
+                        Sankee<span className="text-accent">.</span>
+                    </a>
 
-                        </div>
-                    </div>
+                    {/* Desktop Navigation */}
+                    <ul className='hidden md:flex items-center gap-1'>
+                        {NAVIGATION_LINKS.map((item, index) => (
+                            <li key={index}>
+                                <a 
+                                    href={item.href} 
+                                    className='px-4 py-2 text-sm text-text-secondary hover:text-text-primary transition-colors rounded-lg hover:bg-tertiary'
+                                    onClick={(e) => handleLinkClick(e, item.href)}
+                                >
+                                    {item.label}
+                                </a>
+                            </li>
+                        ))}
+                    </ul>
+
+                    {/* CTA Button - Desktop */}
+                    <a 
+                        href="#contact" 
+                        className='hidden md:flex items-center px-5 py-2.5 bg-accent hover:bg-accent-hover text-white text-sm font-medium rounded-lg transition-all duration-300'
+                        onClick={(e) => handleLinkClick(e, '#contact')}
+                    >
+                        Contact Me
+                    </a>
+
+                    {/* Mobile Menu Button */}
+                    <button 
+                        className='md:hidden p-2 text-text-secondary hover:text-text-primary transition-colors'
+                        onClick={toggleMobileMenu}
+                        aria-label="Toggle menu"
+                    >
+                        {isMobileMenuOpen ? (
+                            <FiX className='w-6 h-6' />
+                        ) : (
+                            <FiMenu className='w-6 h-6' />
+                        )}
+                    </button>
                 </div>
-                {/* mobile menu */}
-                <div className='rounded-lg lg:hidden overflow-hidden'>
-                    <div className='flex items-center justify-end'>
-                        <div className='flex items-center'>
-                            <button className='focus:outline-none lg:hidden p-3 sm:p-4 touch-manipulation'
-                                onClick={toggleMobileMenu}>
-                                {isMobileMenuOpen ? (
-                                    <FaTimes className='m-2 h-6 w-6 sm:h-7 sm:w-7 backdrop-blur-lg' />
-                                ) : (
-                                    <FaBars className='m-2 h-6 w-6 sm:h-7 sm:w-7 backdrop-blur-lg' />
-                                )}
-                            </button>
-                        </div>
-                    </div>
-                    {isMobileMenuOpen && (
-                        <ul className='mt-4 flex flex-col gap-4 backdrop-blur-xl p-5 rounded-lg text-xl sm:text-2xl'>
+            </div>
+
+            {/* Mobile Menu */}
+            <AnimatePresence>
+                {isMobileMenuOpen && (
+                    <motion.div
+                        initial={{ opacity: 0, height: 0 }}
+                        animate={{ opacity: 1, height: 'auto' }}
+                        exit={{ opacity: 0, height: 0 }}
+                        transition={{ duration: 0.3 }}
+                        className='md:hidden bg-secondary border-t border-border'
+                    >
+                        <ul className='px-6 py-4 space-y-1'>
                             {NAVIGATION_LINKS.map((item, index) => (
                                 <li key={index}>
-                                    <a href={item.href}
-                                        className='block w-full text-lg sm:text-xl py-2 touch-manipulation'
-                                        onClick={(e) => handleLinkClick(e, item.href)}>
+                                    <a 
+                                        href={item.href}
+                                        className='block px-4 py-3 text-text-secondary hover:text-text-primary hover:bg-tertiary rounded-lg transition-colors'
+                                        onClick={(e) => handleLinkClick(e, item.href)}
+                                    >
                                         {item.label}
                                     </a>
                                 </li>
                             ))}
+                            <li className='pt-2'>
+                                <a 
+                                    href="#contact" 
+                                    className='block px-4 py-3 bg-accent hover:bg-accent-hover text-white text-center font-medium rounded-lg transition-all duration-300'
+                                    onClick={(e) => handleLinkClick(e, '#contact')}
+                                >
+                                    Contact Me
+                                </a>
+                            </li>
                         </ul>
-                    )}
-                </div>
-            </nav>
-        </div>
+                    </motion.div>
+                )}
+            </AnimatePresence>
+        </motion.nav>
     )
 }
 

@@ -1,102 +1,69 @@
-"use client"
-import React from 'react'
-import { SOCIAL_MEDIA_LINKS } from '@/constants'
-import { motion } from 'framer-motion';
-import { FiPhone, FiMail } from 'react-icons/fi';
+"use client";
+import React from "react";
+
+import { FiGithub, FiLinkedin, FiMail, FiHeart } from "react-icons/fi";
 
 const Footer = () => {
-    return (
-        <footer className='relative bg-[#0A192F] border-t border-gray-800'>
-            <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12 sm:py-16'>
-                {/* Gradient Overlay */}
-                <div className='absolute inset-0 bg-gradient-to-t from-[#0A192F] via-transparent to-transparent pointer-events-none' />
+  const currentYear = new Date().getFullYear();
 
-                <motion.div
-                    initial={{ opacity: 0, y: 20 }}
-                    whileInView={{ opacity: 1, y: 0 }}
-                    transition={{ duration: 0.8 }}
-                    className='relative z-10 grid grid-cols-1 gap-8 sm:grid-cols-2 lg:grid-cols-3'
-                >
-                    {/* Contact Info */}
-                    <div className='text-center sm:text-left'>
-                        <h3 className='text-xl sm:text-2xl font-bold bg-gradient-to-r from-blue-500 to-purple-500 bg-clip-text text-transparent mb-4'>
-                            Get in Touch
-                        </h3>
-                        <div className='space-y-3'>
-                            <div className='flex items-center justify-center sm:justify-start gap-2 text-gray-400 hover:text-white transition-colors'>
-                                <FiPhone className="w-4 h-4" />
-                                <span className='font-mono'>+94 77 8337 669</span>
-                            </div>
-                            <div className='flex items-center justify-center sm:justify-start gap-2 text-gray-400 hover:text-white transition-colors'>
-                                <FiMail className="w-4 h-4" />
-                                <a href="mailto:sankeethantharmathayalan@gmail.com" className='hover:text-blue-400 transition-colors'>
-                                    sankeethantharmathayalan@gmail.com
-                                </a>
-                            </div>
-                        </div>
-                    </div>
+  return (
+    <footer className="relative bg-primary border-t border-border">
+      <div className="max-w-6xl mx-auto px-4 sm:px-6 py-8 sm:py-12">
+        <div className="flex flex-col md:flex-row items-center justify-between gap-6">
+          {/* Logo & Copyright */}
+          <div className="text-center md:text-left">
+            <a
+              href="#hero"
+              className="text-xl font-bold text-text-primary hover:text-accent transition-colors"
+            >
+              Sankee<span className="text-accent">.</span>
+            </a>
+            <p className="text-text-muted text-xs sm:text-sm mt-2">
+              Full Stack Developer
+            </p>
+          </div>
 
-                    {/* Social Links */}
-                    <div className='text-center'>
-                        <h3 className='text-xl sm:text-2xl font-bold bg-gradient-to-r from-blue-500 to-purple-500 bg-clip-text text-transparent mb-4'>
-                            Connect With Me
-                        </h3>
-                        <div className='flex items-center justify-center gap-4 sm:gap-6'>
-                            {SOCIAL_MEDIA_LINKS.map((link, index) => (
-                                <motion.a
-                                    initial={{ opacity: 0, scale: 0.5 }}
-                                    whileInView={{ opacity: 1, scale: 1 }}
-                                    whileHover={{ scale: 1.2, rotate: 8 }}
-                                    transition={{
-                                        duration: 0.2,
-                                        delay: index * 0.1
-                                    }}
-                                    href={link.href}
-                                    key={index}
-                                    target='_blank'
-                                    rel='noopener noreferrer'
-                                    className='text-gray-400 hover:text-white transition-colors p-2 hover:bg-white/5 rounded-full'
-                                >
-                                    {link.icon}
-                                </motion.a>
-                            ))}
-                        </div>
-                    </div>
+          {/* Social Links */}
+          <div className="flex items-center gap-4">
+            <a
+              href="https://github.com/Sankeethan01"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="p-2.5 text-text-muted hover:text-text-primary hover:bg-secondary rounded-lg transition-all duration-300"
+              aria-label="GitHub"
+            >
+              <FiGithub className="w-5 h-5" />
+            </a>
+            <a
+              href="https://www.linkedin.com/in/sankee26"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="p-2.5 text-text-muted hover:text-text-primary hover:bg-secondary rounded-lg transition-all duration-300"
+              aria-label="LinkedIn"
+            >
+              <FiLinkedin className="w-5 h-5" />
+            </a>
+            <a
+              href="mailto:sankeethantharmathayalan@gmail.com"
+              className="p-2.5 text-text-muted hover:text-text-primary hover:bg-secondary rounded-lg transition-all duration-300"
+              aria-label="Email"
+            >
+              <FiMail className="w-5 h-5" />
+            </a>
+          </div>
+        </div>
 
-                    {/* Name and Copyright */}
-                    <div className='text-center lg:text-right'>
-                        <motion.div
-                            initial={{ opacity: 0 }}
-                            whileInView={{ opacity: 1 }}
-                            transition={{ duration: 0.8 }}
-                        >
-                            <h2 className='text-2xl sm:text-3xl font-bold mb-2'>
-                                Sankeethan
-                            </h2>
-                            <p className='text-sm text-gray-400 mb-4'>
-                                Full Stack Developer
-                            </p>
-                        </motion.div>
-                    </div>
-                </motion.div>
+        {/* Bottom Bar */}
+        <div className="mt-8 pt-8 border-t border-border">
+          <p className="text-center text-text-muted text-sm flex items-center justify-center gap-1">
+            © {currentYear} Sankeethan. Built with
+            <FiHeart className="w-4 h-4 text-red-500" />
+            using Next.js & Tailwind CSS
+          </p>
+        </div>
+      </div>
+    </footer>
+  );
+};
 
-                {/* Copyright */}
-                <motion.div
-                    initial={{ opacity: 0 }}
-                    whileInView={{ opacity: 1 }}
-                    transition={{ duration: 0.8, delay: 0.2 }}
-                    className='relative z-10 mt-12 pt-8 border-t border-gray-800'
-                >
-                    <p className='text-center text-sm text-gray-400'>
-                        &copy; {new Date().getFullYear()} sankee. All rights reserved.
-                        <span className='block sm:inline sm:ml-1'>
-                            Crafted with ❤️ using Next.js & TailwindCSS
-                        </span>
-                    </p>
-                </motion.div>
-            </div>
-        </footer>
-    )
-}
-
-export default Footer
+export default Footer;
